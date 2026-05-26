@@ -1,9 +1,10 @@
-﻿name: Deploy to Preprod
+name: Deploy to Preprod
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 env:
   AWS_REGION: us-east-1
@@ -80,6 +81,4 @@ jobs:
           k6 run k6-test.js
 
       - name: Performance tests passed
-        run: echo "✅ Tests de performance OK !"
-
-# K6 performance tests enabled
+        run: echo "Tests de performance OK !"
