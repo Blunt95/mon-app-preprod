@@ -81,3 +81,5 @@ jobs:
 
       - name: Performance tests passed
         run: echo "✅ Tests de performance OK !"
+
+# K6 performance tests enabled
