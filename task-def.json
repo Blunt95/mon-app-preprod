@@ -1,0 +1,16 @@
+{
+  "family": "mon-app-preprod",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "executionRoleArn": "arn:aws:iam::606604313843:role/LabRole",
+  "containerDefinitions": [
+    {
+      "name": "mon-app",
+      "image": "606604313843.dkr.ecr.us-east-1.amazonaws.com/mon-app:latest",
+      "portMappings": [{ "containerPort": 3000 }],
+      "essential": true
+    }
+  ]
+}
